@@ -25,7 +25,7 @@ pipeline {
 
 		stage('Deploy') {
 			steps {
-			    bat "mvn jar:jar deploy:deploy"
+			    bat "copy target\\*.war C:\advancia_stage\apache-tomcat-9.0.93\apache-tomcat-9.0.93\webapps"
 			}
 		}
 	}
